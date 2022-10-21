@@ -10,7 +10,7 @@ The runner class uses the @CucumberOptions annotation to define the file locatio
 
 A plugin has been added to produce simple HTML reports that are generated in the target folder each time this class is executed. log4j is used to generate logs during test execution.  
 
-Tags are annotations that are assigned to each feature or scenario to create testing suites (@all, @post, @get). If you want to run a suite you can define a tag in @CucumberOptions or when using the mvn command (mvn clean test -Dcucumber.filter.tags="@TestTag") where @TestTag is the tag to be run.  
+Tags are annotations that are assigned to each feature or scenario to create testing suites (@all, @post, @get). If you want to run a suite you can define a tag in @CucumberOptions to run locally or when using the mvn command (mvn clean test -Dcucumber.filter.tags="@TestTag") where @TestTag is the tag to be run.  
 ### Description of API
 The development team for a retail organization has built an API intended to be used for the
 maintenance of Stock Keeping Unit identifiers (__SKUs__) which are used to identify and track the
