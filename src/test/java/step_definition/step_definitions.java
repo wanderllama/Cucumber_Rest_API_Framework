@@ -10,7 +10,11 @@ public class step_definitions {
 
     Logger log = LogManager.getLogger();
 
-    Map<String, String> parameters;
+    Map<String, String> requestBody;
+
+    Map<String, String> responseBody;
+
+
 
 
 
