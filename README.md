@@ -1,4 +1,12 @@
 # API Testing For Maintenance of Stock Keeping Unit Identifiers (SKUs)
+
+### How To Run From Command Line
+navigate to the directory of the project  
+cd /path/of/project  
+
+use following command to execute test suite defined in Runner class  
+mvn test -Dsurefire  
+
 ### Description of framework
 This is a java cucumber-junit framework with REST-ASSURED libraries built using maven to properly test the behavior of this REST API.  
 
@@ -8,9 +16,9 @@ The second layer is the implementation layer is located in the step_definitions 
 
 The runner class uses the @CucumberOptions annotation to define the file locations of the features and step definitions.  
 
-A plugin has been added to produce simple HTML reports that are generated in the target folder each time this class is executed. log4j is used to generate logs during test execution.  
+A plugin has been added to produce simple HTML reports that are generated in the target folder (target/default-html-reports/index.html) each time this class is executed. log4j is used to generate logs during test execution and are located in logs folder.  
 
-Tags are annotations that are assigned to each feature or scenario to create testing suites (@all, @post, @get). If you want to run a suite you can define a tag in @CucumberOptions to run locally or when using the mvn command (mvn clean test -Dcucumber.filter.tags="@TestTag") where @TestTag is the tag to be run.  
+Tags are annotations that are assigned to each feature or scenario to create testing suites (@all, @post, @get). If you want to run a suite you can define a tag in @CucumberOptions (located in Runner class) to run locally or when using the mvn command (mvn clean test -Dcucumber.filter.tags="@TestTag") where @TestTag is the tag to be run.  
 ### Description of API
 The development team for a retail organization has built an API intended to be used for the
 maintenance of Stock Keeping Unit identifiers (__SKUs__) which are used to identify and track the
@@ -30,6 +38,6 @@ Read operations are handled through HTTP __GET__
 
 Delete operations are handled through HTTP __DELETE__
 
-### List of Dependencies
+[//]: # (### List of Dependencies)
 
 

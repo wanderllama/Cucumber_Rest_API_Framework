@@ -1,4 +1,4 @@
-21.10.2022 12:32:06 INFO  Hooks:15 - GET request made to /skus
-21.10.2022 12:32:06 INFO  Hooks:15 - 200 is the expected status code for this request
-21.10.2022 12:32:06 INFO  Hooks:15 - 200 is the actual status code for this request
-21.10.2022 12:32:06 INFO  Hooks:27 - --- End: validate status code GET request all ---
+21.10.2022 12:34:24 INFO  Hooks:15 - GET request made to /skus
+21.10.2022 12:34:24 INFO  Hooks:15 - 200 is the expected status code for this request
+21.10.2022 12:34:24 INFO  Hooks:15 - 200 is the actual status code for this request
+21.10.2022 12:34:24 INFO  Hooks:27 - --- End: validate status code GET request all ---
