@@ -1,0 +1,20 @@
+21.10.2022 10:35:34 INFO  Hooks:25 - --- End: validate status code for DELETE request by id ---
+21.10.2022 10:35:34 INFO  Hooks:20 - --- Start: validate status code GET request all ---
+21.10.2022 10:35:35 INFO  Hooks:15 - GET request made to /skus
+21.10.2022 10:35:35 INFO  Hooks:15 - 200 is the expected status code for this request
+21.10.2022 10:35:35 INFO  Hooks:15 - 200 is the actual status code for this request
+21.10.2022 10:35:35 INFO  Hooks:25 - --- End: validate status code GET request all ---
+21.10.2022 10:35:35 INFO  Hooks:20 - --- Start: validate status code for GET request by id ---
+21.10.2022 10:35:35 INFO  Hooks:15 - GET request made to /skus/JB7RKM52IHBC0I99M6KVHLKC9NVV4KQNSO5AEMVJF66Q9ASUAAJG
+21.10.2022 10:35:35 INFO  Hooks:15 - 200 is the expected status code for this request
+21.10.2022 10:35:35 INFO  Hooks:15 - 200 is the actual status code for this request
+21.10.2022 10:35:35 INFO  Hooks:25 - --- End: validate status code for GET request by id ---
+21.10.2022 10:35:35 INFO  Hooks:20 - --- Start: invalid id GET request ---
+21.10.2022 10:35:35 INFO  Hooks:15 - GET request made to /skus/invalidIdNumber
+21.10.2022 10:35:35 INFO  Hooks:15 - 404 is the expected status code for this request
+21.10.2022 10:35:35 INFO  Hooks:15 - 200 is the actual status code for this request
+21.10.2022 10:35:35 INFO  Hooks:25 - --- End: invalid id GET request ---
+21.10.2022 10:35:35 INFO  Hooks:20 - --- Start: validate status code for POST request with valid data ---
+21.10.2022 10:35:35 INFO  Hooks:25 - --- End: validate status code for POST request with valid data ---
+21.10.2022 10:35:35 INFO  Hooks:20 - --- Start: validate status code for POST request with invalid data ---
+21.10.2022 10:35:35 INFO  Hooks:25 - --- End: validate status code for POST request with invalid data ---

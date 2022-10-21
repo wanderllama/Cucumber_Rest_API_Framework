@@ -26,7 +26,6 @@ public class MyStepdefs {
 
     @When("{string} is the endpoint")
     public void isTheEndpoint(String endpoint) {
-        log.info("\nstart of test case");
         RestAssured.baseURI = "https://1ryu4whyek.execute-api.us-west-2.amazonaws.com";
         RestAssured.basePath = "/dev";
         this.endpoint = endpoint;
@@ -38,35 +37,35 @@ public class MyStepdefs {
             case "GET":
                 response = given().accept(ContentType.JSON)
                         .get(endpoint);
-                log.info("GET request made to " + endpoint);
+                Hooks.logMessage("GET request made to " + endpoint);
                 break;
             case "POST":
                 response = given().accept(ContentType.JSON)
                         .body(requestBody)
                         .post(endpoint);
-                log.info("POST request made to " + endpoint);
+                Hooks.logMessage("POST request made to " + endpoint);
                 break;
             case "DELETE":
                 response = given().accept(ContentType.JSON)
                         .delete(endpoint);
-                log.info("DELETE request made to " + endpoint);
+                Hooks.logMessage("DELETE request made to " + endpoint);
                 break;
             default:
-                log.info("invalid request type used in Give \"requestType\" request step of this scenario");
+                Hooks.logMessage("invalid request type used in Give \"requestType\" request step of this scenario");
                 throw new Exception(requestType + " is not a valid request type to be used in scenario -> POST, GET, DELETE are valid types");
         }
     }
 
     @Then("status code is {string}")
     public void statusCodeIs(String statusCode) {
-        log.info(statusCode + " is the expected status code for this request");
+        Hooks.logMessage(statusCode + " is the expected status code for this request");
         try {
             int actualStatusCode = response.getStatusCode();
-            log.info(actualStatusCode + " is the actual status code for this request");
+            Hooks.logMessage(actualStatusCode + " is the actual status code for this request");
             int tmp = Integer.parseInt(statusCode);
             response.then().assertThat().statusCode(tmp);
         } catch (NumberFormatException e) {
-            log.info(statusCode + " is not a valid number and can not be used in step definition");
+            Hooks.logMessage(statusCode + " is not a valid number and can not be used in step definition");
         }
     }
 
