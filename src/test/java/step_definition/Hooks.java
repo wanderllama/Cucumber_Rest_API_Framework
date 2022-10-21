@@ -17,13 +17,14 @@ public class Hooks {
 
     @Before
     public void setup(Scenario scenario) {
-        log.info("--- Start: " + scenario.getName() + " ---");
+        logMessage("--- Start: " + scenario.getName() + " ---");
     }
 
     @After
     public void tearDown(Scenario scenario) {
-        if (scenario.isFailed())
-            log.info("scenario failed");
-        log.info("--- End: " + scenario.getName() + " ---");
+        if (scenario.isFailed()) {
+            logMessage("scenario failed");
+        }
+        logMessage("--- End: " + scenario.getName() + " ---");
     }
 }
