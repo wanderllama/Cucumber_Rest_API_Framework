@@ -22,6 +22,8 @@ public class Hooks {
 
     @After
     public void tearDown(Scenario scenario) {
+        if (scenario.isFailed())
+            log.info("scenario failed");
         log.info("--- End: " + scenario.getName() + " ---");
     }
 }
