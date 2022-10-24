@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="GET HTTP Requests" time="3.848" tests="3" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="POST HTTP Requests" time="1.199" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,35 +60,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="validate status code GET request all" classname="GET HTTP Requests" time="2.895">
-    <system-out><![CDATA[2022-10-21 15:37:58 INFO  Hooks:15 - --- Start: validate status code for POST request with valid data ---
-2022-10-21 15:37:58 INFO  Hooks:15 - --- Start: validate status code GET request all ---
-2022-10-21 15:38:01 INFO  Hooks:15 - GET request made to /skus
-2022-10-21 15:38:01 INFO  Hooks:15 - 200 is the expected status code for this request
-2022-10-21 15:38:01 INFO  Hooks:15 - 200 is the actual status code for this request
-2022-10-21 15:38:01 INFO  Hooks:15 - --- End: validate status code GET request all ---
+  <testcase name="validate status code for POST request with valid data" classname="POST HTTP Requests" time="1.193">
+    <error message="object cannot be null" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: object cannot be null
+]]></error>
+    <system-out><![CDATA[2022-10-21 15:37:59 INFO  Hooks:15 - scenario failed
+2022-10-21 15:37:59 INFO  Hooks:15 - --- End: validate status code for POST request with valid data ---
 ]]></system-out>
   </testcase>
-  <testcase name="validate status code for GET request by id" classname="GET HTTP Requests" time="0.525">
-    <system-out><![CDATA[2022-10-21 15:38:01 INFO  Hooks:15 - --- Start: validate status code for GET request by id ---
-2022-10-21 15:38:01 INFO  Hooks:15 - GET request made to /skus/JB7RKM52IHBC0I99M6KVHLKC9NVV4KQNSO5AEMVJF66Q9ASUAAJG
-2022-10-21 15:38:01 INFO  Hooks:15 - 200 is the expected status code for this request
-2022-10-21 15:38:01 INFO  Hooks:15 - 200 is the actual status code for this request
-2022-10-21 15:38:01 INFO  Hooks:15 - --- End: validate status code for GET request by id ---
-]]></system-out>
-  </testcase>
-  <testcase name="invalid id GET request" classname="GET HTTP Requests" time="0.427">
-    <failure message="1 expectation failed.&#10;Expected status code &lt;404&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-1 expectation failed.
-Expected status code <404> but was <200>.
-
-]]></failure>
-    <system-out><![CDATA[2022-10-21 15:38:01 INFO  Hooks:15 - --- Start: invalid id GET request ---
-2022-10-21 15:38:02 INFO  Hooks:15 - GET request made to /skus/invalidIdNumber
-2022-10-21 15:38:02 INFO  Hooks:15 - 404 is the expected status code for this request
-2022-10-21 15:38:02 INFO  Hooks:15 - 200 is the actual status code for this request
-2022-10-21 15:38:02 INFO  Hooks:15 - scenario failed
-2022-10-21 15:38:02 INFO  Hooks:15 - --- End: invalid id GET request ---
+  <testcase name="validate status code for POST request with invalid data" classname="POST HTTP Requests" time="0.005">
+    <error message="object cannot be null" type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: object cannot be null
+]]></error>
+    <system-out><![CDATA[2022-10-21 15:37:59 INFO  Hooks:15 - --- Start: validate status code for POST request with invalid data ---
+2022-10-21 15:37:59 INFO  Hooks:15 - scenario failed
+2022-10-21 15:37:59 INFO  Hooks:15 - --- End: validate status code for POST request with invalid data ---
 ]]></system-out>
   </testcase>
 </testsuite>

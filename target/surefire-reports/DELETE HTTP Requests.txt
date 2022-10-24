@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: DELETE HTTP Requests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.194 s <<< FAILURE! - in DELETE HTTP Requests
+DELETE HTTP Requests.validate status code for DELETE request by id  Time elapsed: 1.194 s  <<< ERROR!
+java.lang.IllegalArgumentException: object cannot be null
+

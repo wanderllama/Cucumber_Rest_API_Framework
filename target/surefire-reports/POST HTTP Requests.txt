@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: POST HTTP Requests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.199 s <<< FAILURE! - in POST HTTP Requests
+POST HTTP Requests.validate status code for POST request with valid data  Time elapsed: 1.193 s  <<< ERROR!
+java.lang.IllegalArgumentException: object cannot be null
+
+POST HTTP Requests.validate status code for POST request with invalid data  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.IllegalArgumentException: object cannot be null
+
