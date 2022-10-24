@@ -10,7 +10,7 @@ mvn test -Dsurefire
 ### Description of framework
 This is a java cucumber-junit framework with REST-ASSURED libraries built using maven to properly test the behavior of this REST API.  
 
-The framework is seperated into two layers. The business layer is in the features package located in resources. Each feature file has a list of BDD scenarios describing an event designed to test the API. The scenarios are broken into steps and each step is written in gherkin, an easy to understand business language.   
+The framework is seperated into two layers. The business layer is in the feature files located in resources. Each feature file has a list of BDD scenarios describing an event designed to test the API. The scenarios are broken into steps and each step is written in gherkin, an easy to understand business language. The code implemented behind each step can be reused to complete other scenarios. Parameterization can be used in the scenarios to feed input data to the step definitions.  
 
 The second layer is the implementation layer is located in the step_definitions package. Each step of a scenario has code implementation to automate the step.   
 
