@@ -8,10 +8,8 @@ Feature: POST HTTP Requests
       | description | Jelly donut |
       | price       | 2.99        |
     Given "POST" request
-    Then status code is "201"
-    And response body has the following
-      | createdAt | string |
-      | updatedAt | string |
+#    Then status code is "201"
+    And response body has "POST_Response" schema
 
   Scenario: validate status code for POST request with invalid data
     When "/skus" is the endpoint
@@ -21,8 +19,6 @@ Feature: POST HTTP Requests
       | price       | 2.99        |
       | trash       | trash       |
     Given "POST" request
-    Then status code is "400"
-    And response body has the following
-      | createdAt | string |
-      | updatedAt | string |
+#    Then status code is "400"
+    And response body has "POST_Response" schema
 

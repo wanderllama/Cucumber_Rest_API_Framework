@@ -6,12 +6,15 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import static io.restassured.RestAssured.*;
 
+import java.io.File;
 import java.util.Map;
 
 public class MyStepdefs {
@@ -76,11 +79,19 @@ public class MyStepdefs {
 
     @And("parameters")
     public void parameters(Map<String , String> requestBody) {
-
+        this.requestBody = requestBody;
     }
 
-    @And("response body has the following")
-    public void responseBodyHasTheFollowing(Map<String , String> responseBody) {
+    @And("response body has {string} schema")
+    public void responseBodyHasSchema(String schema) throws Exception {
+        switch (schema) {
+            case "POST_Response":
+                response.then().assertThat().body(JsonSchemaValidator.
+                        matchesJsonSchema(new File("src/test/resources/JSON_Schema/POST_Response")));
+                break;
+            default:
+                throw new Exception(schema + " is not a valid schema type to be used in scenario");
 
+        }
     }
 }
