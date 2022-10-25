@@ -88,8 +88,10 @@ public class MyStepdefs {
             case "POST_Response":
                 response.then().assertThat().body(JsonSchemaValidator.
                         matchesJsonSchema(new File("src/test/resources/JSON_Schema/POST_Response")));
+                Hooks.logMessage("json schema for post response matches");
                 break;
             default:
+                Hooks.logMessage("invalid schema type used in And \"schemaType\" request step of this scenario");
                 throw new Exception(schema + " is not a valid schema type to be used in scenario");
 
         }
