@@ -1,7 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: DELETE HTTP Requests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.194 s <<< FAILURE! - in DELETE HTTP Requests
-DELETE HTTP Requests.validate status code for DELETE request by id  Time elapsed: 1.194 s  <<< ERROR!
-java.lang.IllegalArgumentException: object cannot be null
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.344 s <<< FAILURE! - in DELETE HTTP Requests
+DELETE HTTP Requests.validate status code for DELETE request by id  Time elapsed: 3.344 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <200>.
+
 

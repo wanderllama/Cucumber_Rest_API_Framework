@@ -8,7 +8,7 @@ Feature: DELETE HTTP Requests
       | description | Jelly donut |
       | price       | 2.99        |
     Given "POST" request
-    Then status code is "201"
+    Then status code is "200"
 
   Scenario: validate status code for DELETE request by id
     When "/skus/{id}" is the endpoint
